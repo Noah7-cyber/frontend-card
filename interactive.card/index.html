@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="card.css">
+    <title>Interactive card details</title>
+</head>
+<body>
+    <div id="main-container">
+        <div class="cards-container">
+            <div class="img-info"><img src="images/bg-card-back.png" id="back-card" class="card">
+                <label id="cvcValue" class="abs-img-card abs-text"> 000</label>
+            </div>
+           <div class="img-info-front">
+            <div class="rel-front">
+                <img src="images/bg-card-front.png" alt="" class="card front-card">
+                <img src="images/card-logo.svg" alt="" class="front-index-img">
+                <label id="cardNumberValue" class="abs-text">0000 0000 0000 0000</label>
+                <label id="cardHolderNameValue" class="abs-text">JANE APPLESSED</label>
+                <label id="cardyValue" class="abs-text"><span id="monthValue">00</span>/<span id="yearValue">00</span></label>
+            </div>
+           
+           </div>
+        
+        </div>
+        <div class="cards-det-contain so" >
+            <div class="card-details">
+                <div class="card-info">
+                    <div class="info">
+                        <label for="card-name">CARDHOLDER NAME</label>
+                        <input id="card-input" maxlength="23"  name="card-name" type="text" placeholder="eg. Jane Applessed" required>
+                        <span style="color: red; margin-top:4%; font-size:70%; display: none;" aria-hidden="true" id="distress-name">Can't be blank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-details">
+                <div class="card-info">
+                    <div class="info">
+                        <label for="card-number">CARD NUMBER</label>
+                        <input  name="card-number" minlength="16" maxlength="19" type="text" placeholder="eg. 1234 5678 9123 0000" id="card-no" required>
+                        <span style="color: red; margin-top:4%; font-size:70%; display: none;" aria-hidden="true" id="distress-cardno"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-details stubbon">
+                <div class="card-info">
+                    <div class="info">
+                        <div class="info2">
+                           
+                            <div class="info3 remove">
+                                <label for="exp.date">EXP.DATE</label>
+                                <input id="mm" name="exp.date"maxlength="2"type="text" placeholder="MM" class="small"  required>
+                                <span style="color: red; margin-top:4%; font-size:70%; display: none;" aria-hidden="true" id="distress-expdate">Can't be blank</span>
+                            </div>
+                            <div class="info3 remove">
+                                <label for="mm/yy">(MM/YY)</label>
+                                <input id="yy"  class="small" name="mm/yy" type="text" minlength="01" maxlength="2" placeholder="YY" required>
+                                <span style="color: red; margin-top:4%; font-size:70%; display: none;" aria-hidden="true" id="distress-year">Can't be blank</span>
+                            </div>
+                            <div class="info3">
+                                <label for="cvc">CVC</label>
+                            <input name="cvc" minlength="3" maxlength="3" type="text" id="cvcin" placeholder="e.g. 123"  required>
+                            <span style="color: red; margin-top:4%; display: none; font-size:70%;" aria-hidden="true" id="distress-cvc">Can't be blank and must be 3 digits</span>
+                            </div>                          
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="confirm">Confirm</button>
+        </div>
+    <div class="cards-det-contain thank-you" style=" display: none;">
+        <img class="space" src="images/icon-complete.svg" alt="">
+        <h1 class="space" style="font-size: 1.5em;">THANK YOU!</h1>
+       <p class="space"> We've added your card details</p>
+        <button class="space" id="continue">Continue</button>
+    </div>
+    </div>
+    <script src="card.js"></script>
+</body>
+</html>
+<!-- made by Noah Ibrahim -->
+<!-- contact me noahibr2@gmail.com -->
